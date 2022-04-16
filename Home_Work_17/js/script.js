@@ -1,11 +1,13 @@
- function validEmail() { 
-    var checkemail= (document.getElementById("email")).value;
-    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if(pattern.test(String(checkemail).toLowerCase())) {
-        alert("True , your email is Valid");
+ function CheckValidEmail(email) { 
+    var email= document.getElementById("email");
+    var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(pattern.test(email.value)) {
+        alert("True , your email is Valid"); 
+        return true;
     } 
     else{
-        alert("False, your email isn't valid !");
+        alert("False, your email isn't valid !"); 
+        return false;
     } 
     
 }  
