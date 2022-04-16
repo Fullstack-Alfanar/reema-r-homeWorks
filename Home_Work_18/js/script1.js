@@ -6,7 +6,7 @@ function validDetails() {
     validName(x1);
     validAge(x2);
     validId(x3);
-    valid_Email(x4);
+    CheckValidEmail(x4);
 
 }
 
@@ -79,13 +79,18 @@ function validId(id) {  // function to check the validation of id number
 
 }
 
-function valid_Email(email) {
-    const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // pattern of valid email
-    if (pattern.test(String(email).toLowerCase())) {  // condition to check the validation of email
-        alert("True , your email is Valid");
-    }
-    else {
-        alert("False, your email isn't valid !");
-    }
+function CheckValidEmail(x4) {
+   
+    var pattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    if(!pattern.test(x4)) { 
+      alert("False, your email isn't valid !");
+        return false;
 
-}
+    } 
+    else{  
+        alert("True , your email is Valid");
+        return true;
+
+    } 
+    
+}  
