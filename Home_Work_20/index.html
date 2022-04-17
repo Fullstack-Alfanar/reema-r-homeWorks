@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Inconsolata:wght@500&family=Patrick+Hand&family=Quintessential&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="title">
+        <div>
+            <h1 class="move">Emek Yezrael College</h1>
+            <h3 class="move">Course's Name : Object-Oriented Programming</h3>
+            <h4 class="move">Lecture's Name : Adi </h4>
+        </div>
+        <div class="moveImg">
+            <img src="https://www.yvc.ac.il/wp-content/uploads/1/2017/12/YVC_LOGO_www-1.png" alt="College">
+
+        </div>
+    </header>
+    <div class="allCards">
+        <div class="cards" id="card1">
+            <h5>The number of students in the class is : </h5>
+            <hr>
+            <p id="p1"></p>
+        </div>
+        <div class="cards" id="card2">
+            <h5>The averge of students in the class is :</h5>
+            <hr>
+            <p id="p2"></p>
+        </div>
+    </div>
+    <div class="inputs">
+        <input class="inputName" type="text" placeholder="name of student" id="Fname">
+        <input class="inputGrade" type="number" placeholder="grade" id="grade">
+        <button class="btn" onclick="fillData()">Save</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td class="tdTitle"> <label>Student's Name</label> </td>
+                <td class="tdTitle"> <label>Student's Grade</label></td>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+        </tbody>
+    </table>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
