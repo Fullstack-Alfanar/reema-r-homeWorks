@@ -1,0 +1,122 @@
+.title{
+    background-color: #167134; 
+    color: white;  
+    display: flex;
+
+}  
+body{
+    background-color: #5ECCC9;
+}
+.move{
+    margin-top: 15px;
+    margin-left: 15px;
+    font-family: 'Balsamiq Sans', cursive;
+} 
+.moveImg{
+    margin-top: 15px; 
+    margin-left: 700px;
+}    
+
+h5{
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+#card2{
+    margin-left: 70px;
+}
+.cards{
+    width: 250px;
+    height: 150px; 
+    text-align: center;
+    border: 1px solid transparent;
+    margin-top: 40px; 
+    background-color: #F1DEB6;
+    outline: 10px dashed white;
+    box-shadow: 0 0 0 10px #167134; 
+    animation: 2s animateBorder ease infinite;
+} 
+
+@keyframes animateBorder{
+    to{
+        outline-color: #167134;
+        box-shadow: 0 0 0 10px white;
+    }
+} 
+
+.allCards{
+    display: flex; 
+    justify-content: center;  
+} 
+
+.inputs{
+    text-align: center; 
+    margin-top: 45px; 
+    
+} 
+.inputName{
+    width: 180px;
+    height: 20px; 
+    border-radius: 10px; 
+    margin-left: 100px;
+   
+    border-color: #167134;
+} 
+.inputGrade{
+    width: 180px;
+    height: 20px; 
+    border-radius: 10px;
+    margin-left: 20px; 
+    margin-right: 20px;
+    border-color: #167134;
+} 
+.btn{
+    width: 60px;
+    height: 25px; 
+    border-radius: 10px; 
+    background-color: #167134; 
+    color: white; 
+    font-family: 'Balsamiq Sans', cursive;
+
+} 
+.titleTable{
+    text-align: center;
+} 
+
+table{
+    margin-left: 30px;
+    margin-top: 30px;
+} 
+
+
+
+.tdTitle{ 
+    width: 150px;
+    border: 1px solid black; 
+    border-radius: 8px;
+    text-align: center; 
+    background-color:  #E5C565; 
+    font-family: 'Balsamiq Sans', cursive;
+}  
+
+.tdData{ 
+    width: 150px;
+    border: 1px solid black; 
+    border-radius: 8px;
+    text-align: center;  
+    background-color: #F1DEB6;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.fail{
+    color: red; 
+    font-size: x-large;
+}
+
+.success{
+    color: green; 
+    font-size: x-large;
+} 
+
+.styleCnt{
+    font-size: x-large;
+}
