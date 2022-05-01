@@ -1,0 +1,53 @@
+body{
+    display: grid;
+    justify-items: center;  
+    background-image:linear-gradient(to right,#7459A6,#B488B9,#D7A2C2);
+    
+}
+.container{ 
+
+    display: grid;
+   border-radius: 20px; 
+    justify-items:center;
+    margin-top: 100px; 
+    background-color: whitesmoke ; 
+    width: 50%; 
+
+} 
+.user{
+    width: 200px;
+    border-radius: 20px; 
+    padding-left: 5px; 
+    margin-top: 10px;
+  
+}
+.pass{
+    margin-top: 15px; 
+    width: 200px;
+    border-radius: 20px; 
+    padding-left: 5px;   
+
+} 
+
+.btn{
+    margin-top: 12px; 
+    margin-left: 140px;
+    border-radius: 15px;  
+    background-color: #2E5FF8; 
+    color: white;
+    font-size: small;
+
+}
+
+.pic{
+    width: 30px;
+}
+
+
+.sucess{
+    color: #37B737;
+} 
+
+.faild{
+    color: red;
+}
