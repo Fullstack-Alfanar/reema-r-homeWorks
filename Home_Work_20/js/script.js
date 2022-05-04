@@ -35,20 +35,20 @@ function fillData() {
     }
 
     else if (fname.value != "" && grade.value != "" && validData) {
-        {
+        
             // After the data has passed a validation test, the function fill the table    
-            FillingATable(fname.value, Number.parseInt(grade.value));
+            FillingTable(fname.value, Number.parseInt(grade.value));
 
             var obj = {
-                S_name: fname.value,
-                S_grade: Number.parseInt(grade.value)
+                sname : fname.value,
+                sgrade : Number.parseInt(grade.value)
             };
 
 
             arr.push(obj);
             localStorage.setItem("table", JSON.stringify(arr));
 
-        }
+        
         // Empty the variables
 
         fname.value = "";
@@ -58,7 +58,7 @@ function fillData() {
 }
 
 
-function FillingATable(SName, SGrade) {
+function FillingTable(SName, SGrade) {
     let numOfStudents = document.getElementById("p1");
     let avgOfStudents = document.getElementById("p2");
     let TableBody = document.getElementById("myTable");
@@ -103,24 +103,28 @@ function FillingATable(SName, SGrade) {
         avgOfStudents.className = "success";
     }
 
-    numOfStudents.className = "styleCnt";
-    // specific style to data cells
+    numOfStudents.className = "styleCnt"; 
+
+    // specific style to data cells 
+
     tdName.className = "tdData";
     tdGrade.className = "tdData";
 
 
-}
+} 
 
-    if (localStorage.getItem("table")) {
+function loadingDataFromlocalStorage(){ 
+    if (localStorage.getItem("table")) 
         arr = JASON.parse(localStorage.getItem("table"));
-        let data1, data2 = null;
-        for (let k of arr) {
-            data1 = arr[k].S_name;
-            data2 = arr[k].S_grade;
-            FillingATable(data1, data2);
+       
+        for (let k =0 ; k<arr.length ; k++) {
+            FillingTable(k.sname, k.sgrade );
     
         }
 
 } 
 
+
+
+    
 
