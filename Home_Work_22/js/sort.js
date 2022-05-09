@@ -1,36 +1,20 @@
+let arr = [10, 4, 30, 13, 9, 17, 2, 24, 11, 23, 5, 7]; 
 
-function countingSort(arr) {
-
-  // helper array to store
-
-  var counter = [];
-  // loop to fill the counter in number of how many times each number appeared in the arr
-
-  for (var i = 0; i < arr.length; i++) {  // --------------------O(n)--------------------
-    // for the first time the cell in index (i), is stored nothing, then it will update to one
-    if (!counter[arr[i]]) {
-      counter[arr[i]] = 1;
-    }
-
-    // After that each time added 1 to the value 
-    else {
-      counter[arr[i]] ++;
+function sortArray(arr) {
+  for (i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      let x = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = x;
+      i = -1;
     }
   }
-
-  // create a new array to store a sorting numbers
-
-  var newArr = [];
-  for (i in counter) {   //------------------------O(n)--------------------
-    while (counter[i] > 0) {
-      newArr.push(parseInt(i));
-      counter[i]--;
-    }
-  }
-  return newArr;
+  return arr;
 }
 
-var arr = [10, 4, 30, 13, 9, 17, 24, 11, 5, 7,1];
-console.log(countingSort(arr));
+function printSortArr(callbalck) {
+  let sortArr = callbalck(arr);
+  console.log(sortArr);
+}
 
-  // O(n) + O(n) = O(2n) ===> O(n)
+printSortArr(sortArray);
